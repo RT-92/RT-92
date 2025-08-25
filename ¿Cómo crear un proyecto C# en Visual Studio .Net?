@@ -1,0 +1,50 @@
+¿Cómo crear un proyecto C# en Visual Studio .Net?
+ 
+Para programar en C# se puede hacer de varias maneras, pero en esta guía nos centraremos en el más fácil, el IDE "Visual Studio 2022".
+Para instalar Visual Studio 2022 basta con ir a la siguiente direccion: https://visualstudio.microsoft.com/es/downloads/ ; seleccionar la versión "Community"(esta versión es gratuita) y dar clic en “Descargar”. 
+
+
+
+
+
+Una vez descargado el archivo ejecutable, se instala como cualquier otro programa, lo importante es que al llegar a esta sección: 
+
+
+
+seleccionaremos las opciones “Desarrollo de ASP y web” y “Desarrollo de escritorio de .NET”. Estas dos opciones nos permitirán crear proyectos web y proyectos de escritorio.
+
+En esta guía y en las siguientes trabajaremos con proyectos hechos en consola.
+
+Una vez instalado Visual Studio, lo ejecutaremos y crearemos un nuevo proyecto:
+
+
+
+Crearemos una aplicación de consola como ejemplo:
+
+
+
+Luego daremos un nombre a nuestro proyecto:
+
+
+
+
+Por último, seleccionaremos la versión de .NET, por defecto viene la ultima versión, se recomienda seleccionar esta, para poder utilizar todas las características(recientes). En la siguiente imagen aparece .NET 8 pero es probable que para cuando leas esta guía exista ya una versión nueva, no importa, selecciona la versión más nueva.
+
+
+
+Una vez creado el proyecto ya estaremos listos para escribir código en C# utilizando el marco de trabajo de .NET.
+
+
+
+Al hacer clic en el icono verde se compilara y ejecutara nuestro programa. 
+
+
+
+Por defecto y a modo de ejemplo viene una línea de código Console.WriteLine("Hello, World!"); la cual muestra un saludo.
+
+
+
+
+
+Cabe destacar que para crear distintos tipos de proyectos en Visual Studio (Web, Escritorio, Movil, etc.) se siguen los mismos pasos. Solo hay que seleccionar el tipo de proyecto que deseamos crear.
+
