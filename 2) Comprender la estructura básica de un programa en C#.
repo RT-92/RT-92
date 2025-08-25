@@ -2,6 +2,26 @@ Comprender la estructura básica de un programa en C#.
 En este ejemplo utilizaremos un aplicación de consola. Encontraremos una estructura como la siguiente:
 
 
+using System;
+
+namespace ConsoleApplication
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Title = "Aplicacion de Consola";
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+          
+            Console.WriteLine("Hello, World!");
+            Console.ReadKey();
+
+        }
+    }
+}
+
+
 
 Nombre de la solución: la solución es un contenedor de todo el proyecto, una solución puede tener varios proyectos. La solución recibe el mismo nombre del proyecto por defecto. Este se puede cambiar si se lo desea.
 
