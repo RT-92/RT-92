@@ -1,0 +1,274 @@
+Métodos y propiedades de la clase Console en C#
+
+En este artículo, veremos los métodos y propiedades de la clase de Console en C# con ejemplos.
+
+¿Qué es la clase Console en C#?
+
+Para implementar la interfaz de usuario en las aplicaciones de consola, Microsoft nos proporcionó una clase llamada Console. La clase Console está disponible en el espacio de nombres System. Esta clase Console proporciona algunos métodos y propiedades mediante los cuales podemos implementar la interfaz de usuario en una aplicación de consola.
+
+"En otras palabras, si queremos trabajar con la ventana de la consola, ya sea para recibir datos del usuario o para mostrar los mismos, se nos proporciona la consola en C#."
+
+Según la documentación de Microsoft, la clase Console representa los flujos estándar de entrada, salida y error para las aplicaciones de consola y esta clase no se puede heredar porque es una clase estática, es decir, declarada como estática como se muestra en la imagen siguiente.
+
+
+La clase estática en C# contiene solo miembros estáticos, es decir, todas las propiedades y métodos disponibles en la clase Console son estáticos. Por lo tanto, podemos acceder a todos estos miembros utilizando el nombre de la clase Console.
+
+Propiedades de la clase Console en C#:
+Hay muchas propiedades disponibles en la clase Console. Algunos de ellos son los siguientes:
+
+Title: Obtiene o establece el título que se mostrará en la barra de título de la consola. Devuelve la cadena que se mostrará en la barra de título de la consola. La longitud máxima de la cadena de título es de 24500 caracteres.
+
+BackgroundColor: Obtiene o establece el color de fondo de la consola.
+
+ForegroundColor: Obtiene o establece el color de primer plano de la consola. Devuelve un ConsoleColor que especifica el color de primer plano de la consola; es decir, el color de cada carácter que se muestra. El valor predeterminado es gris.
+
+CursorSize: Obtiene o establece la altura del cursor dentro de una celda de caracteres. Devuelve el tamaño del cursor expresado como un porcentaje de la altura de una celda de caracteres. El valor de la propiedad oscila entre 1 y 100.
+
+Métodos de la clase de consola en C#:
+
+Hay muchos métodos disponibles en la clase Console.
+
+Algunos de ellos son los siguientes:
+
+Borrar(): Se utiliza para borrar el búfer de la consola y la ventana de la consola correspondiente de la información de visualización. En palabras simples, se usa para despejar la pantalla.
+Pitido (): Este método reproduce el sonido de un pitido a través del altavoz de la consola. Eso significa que reproduce un pitido usando un altavoz de PC en tiempo de ejecución.
+ResetColor(): Este método se utiliza para establecer los colores de la consola de primer plano y de fondo en sus valores predeterminados.
+Write("cadena"): Este método se usa para escribir el valor de cadena especificado en el flujo de salida estándar.
+WriteLine("cadena"): Este método se utiliza para escribir el valor de cadena especificado, seguido del terminador de línea actual, en la secuencia de salida estándar. Eso significa que este método es igual que el método de escritura, pero mueve automáticamente el cursor a la siguiente línea después de imprimir el mensaje.
+Escritura (variable): Este método se utiliza para escribir el valor de la variable dada en el flujo de salida estándar.
+WriteLine(variable): Este método se utiliza para escribir el valor de la variable dada en el flujo de salida estándar junto con mover el cursor a la siguiente línea después de imprimir el valor de la variable.
+Lectura(): Este método lee un solo carácter del teclado y devuelve su valor ASCII. El tipo de datos debe ser int, ya que devuelve el valor ASCII.
+LeerLine(): Este método lee un valor de cadena del teclado y devuelve solo el valor ingresado. Como devuelve el valor de cadena ingresado, DataType será una cadena.
+ReadKey(): Este método lee un solo carácter del teclado y devuelve información de ese carácter, como qué tecla se ha ingresado y cuál es su valor ASCII correspondiente. El tipo de datos debe ser ConsoleKeyInfo, que contiene la información de clave especificada
+Ejemplo para mostrar el uso del método Write y WriteLine en C#:
+
+El siguiente código de ejemplo se explica por sí mismo, así que revise las líneas de comentarios.
+Programa para mostrar el uso de WriteLine y Write Method
+Primero importe el espacio de nombres System como el
+La clase Console pertenece al espacio de nombres System
+usando System;
+espacio de nombres MyFirstProject
+{
+     Programa de clase interna 
+    {
+        static void Main(string[] args)
+        {
+            Podemos acceder a WriteLine y al método Write usando el nombre de la clase
+            ya que estos métodos son estáticos
+            WriteLine (Método) Imprime el valor y mueve el cursor a la siguiente línea
+ Consola.WriteLine("Hola");
+            Método de escritura Imprime el valor y permanece en la misma línea
+ Consola.Escribir("HOLA ");
+            Método de escritura Imprime el valor y permanece en la misma línea
+ Consola.Write("Adiós");
+            WriteLine (Método) Imprime el valor y mueve el cursor a la siguiente línea
+ Consola.WriteLine("Bienvenido");
+            Método de escritura Imprime el valor y permanece en la misma línea
+ Consola.Write("C#.NET ");
+ Consola.Tecla de lectura();
+        }
+    }
+}
+Salida:
+Ejemplo para mostrar el uso del método Write y WriteLine en C#
+
+Ejemplo para mostrar cómo imprimir el valor de una variable en C#.
+En el siguiente ejemplo, muestro las diferentes formas de imprimir el valor de una variable en el lenguaje C#.
+
+Programa para mostrar cómo imprimir el valor de una variable 
+usando System;
+espacio de nombres MyFirstProject
+{
+     Programa de clase interna 
+    {
+        static void Main(string[] args)
+        {
+            nombre de cadena = "Pranaya";
+ Consola.WriteLine(nombre);
+ Consola.WriteLine("Hola" + nombre);
+ Consola.Write($"Hola {nombre}");
+ Consola.Tecla de lectura();
+        }
+    }
+}
+Salida:
+espacio en blanco
+
+Lectura del valor del usuario en C#:
+Ahora, vamos a entender cómo leer el valor del usuario en una aplicación de consola utilizando el lenguaje C#. Aquí, vamos a usar el método ReadLine() para leer los valores en tiempo de ejecución. En el ejemplo siguiente se muestra cómo leer el valor en tiempo de ejecución en una aplicación de consola en C# mediante el método ReadLine.
+
+Programa para mostrar cómo leer el valor en tiempo de ejecución
+usando System;
+espacio de nombres MyFirstProject
+{
+     Programa de clase interna 
+    {
+        static void Main(string[] args)
+        {
+            Dar un mensaje al usuario para que introduzca su nombre
+ Consola.WriteLine("Ingrese su nombre");
+            El método ReadLine lee un valor de cadena del teclado 
+            nombre de cadena = Consola.Línea de lectura();
+            Impresión de la cadena introducida en la consola
+ Consola.WriteLine($"Hola {nombre}");
+ Consola.Tecla de lectura();
+        }
+    }
+}
+Salida:
+espacio en blanco
+
+¿Cómo se leen números enteros en C# a partir de la palabra clave?
+Cada vez que ingresamos algo, ya sea una cadena o un valor numérico de la palabra clave usando el método ReadLine, el flujo de entrada lo toma como una cadena. Por lo tanto, podemos almacenar directamente los valores de entrada en una variable de cadena. Si desea almacenar los valores de entrada en variables enteras, debemos convertir los valores de cadena en valores enteros. Para una mejor comprensión, eche un vistazo al siguiente ejemplo. Aquí, le pedimos al usuario que ingrese dos números enteros, y luego tomamos esos números enteros como cadenas, y luego convertimos la cadena en números enteros y luego agregamos esos dos números enteros y mostramos el resultado en la ventana de la consola.
+
+Programa para mostrar cómo leer valores enteros
+usando System;
+espacio de nombres MyFirstProject
+{
+     Programa de clase interna 
+    {
+        static void Main(string[] args)
+        {
+ Consola.WriteLine("Entéter dos números:");
+            Convertir cadena a entero
+            int Número1 = Convertir.ToInt32(Consola.Línea de lectura());
+            Convertir cadena a entero
+            int Número2 = Convertir.ToInt32(Consola.Línea de lectura());
+            int resultado = número1 + número2;
+ Consola.WriteLine($"La suma es: {Result}");
+ Consola.WriteLine($"La suma es: {Number1 + Number2}");
+ Consola.Tecla de lectura();
+        }
+    }
+}
+Salida:
+¿Cómo leer el número entero en C# a partir de la palabra clave?
+
+Nota: El método ReadLine siempre acepta el valor en forma de cadena. Por lo tanto, necesitamos convertir los valores al tipo apropiado. En el ejemplo anterior, estamos convirtiendo los valores a tipo entero mediante el método Convert.ToInt. Discutiremos este método en detalle en nuestros próximos artículos.
+
+Ejemplo para comprender el método ReadKey y Read en C#:
+El método Read le permitirá ingresar un carácter y devolverá el valor ASCII de ese carácter. El método ReadKey también le permite ingresar una tecla y devolverá la información de la clave, como qué tecla presionó, cuál es el valor ASCII de esa tecla, etc. Para una mejor comprensión, eche un vistazo al siguiente ejemplo.
+
+usando System;
+espacio de nombres MyFirstProject
+{
+     Programa de clase interna 
+    {
+        static void Main(string[] args)
+        {
+ Consola.WriteLine("Ingrese una clave");
+            int var1 = Consola.Leer();
+ Consola.WriteLine($"El valor ASCII de la clave introducida es: {var1}");
+ Consola.WriteLine("Ingrese otra clave");
+ ConsoleKeyInfo var2 = Consola.Tecla de lectura();
+ Consola.WriteLine($"\nClave ingresada: {var2. Clave} KeyChar:{var2. KeyChar} ASCII:{(int)var2. KeyChar}");
+ Consola.WriteLine("Presione cualquier tecla para terminar");
+ Consola.Tecla de lectura();
+        }
+    }
+}
+Salida:
+Ejemplo para comprender el método ReadKey y Read en C#
+
+Ejemplo para comprender las propiedades de la clase de consola:
+Ahora, escribiremos un programa para mostrar el uso de las propiedades BackgroundColor, ForegroundColor, Beep y Title de la clase Console en C#. La propiedad BackgroundColor establece la consola de color de fondo y la propiedad ForegroundColor establece el color del texto. La propiedad Title se usa para establecer el título de la aplicación de consola y el método Beep se usa para emitir un pitido mediante el altavoz del equipo. Para una mejor comprensión, eche un vistazo al siguiente ejemplo.
+
+Programa para mostrar el uso de las propiedades de la clase de consola y el método Beep
+usando System;
+espacio de nombres MyFirstProject
+{
+     Programa de clase interna 
+    {
+        static void Main(string[] args)
+        {
+ Consola.BackgroundColor = ConsoleColor.Azul;
+ Consola.ForegroundColor = ConsoleColor.Blanco;
+ Consola.Title = "Descripción de la clase de consola";
+ Consola.WriteLine("Color de fondo: azul");
+ Consola.WriteLine("Color de primer plano: Blanco");
+ Consola.WriteLine("Título: Descripción de la clase de consola");
+            Hará que suene un pitido
+ Consola.Pitido();
+ Consola.Tecla de lectura();
+        }
+    }
+}
+Salida:
+Ejemplo para comprender las propiedades de la clase de consola
+
+Ejemplo complejo para entender la clase de consola:
+Ahora, escribiremos un programa para aceptar detalles del empleado como EmployeeId, Nombre, Salario, Dirección y Departamento, y luego imprimiremos la información aceptada en la ventana de la consola.
+
+Programa para mostrar el uso de la clase Console
+usando System;
+espacio de nombres MyFirstProject
+{
+     Programa de clase interna 
+    {
+        static void Main(string[] args)
+        {
+            Pedir al usuario que introduzca los datos del empleado
+ Consola.WriteLine("Introducir detalles del empleado");
+ Consola.WriteLine("Ingresar ID de empleado");
+            int EmployeeID = Convertir.ToInt32(Consola.Línea de lectura());
+ Consola.WriteLine("Ingrese el nombre del empleado");
+            string Nombre = Consola.Línea de lectura();
+ Consola.WriteLine("Ingresar salario del empleado");
+            int Salario = Convertir.ToInt32(Consola.Línea de lectura());
+ Consola.WriteLine("Ingresar dirección del empleado");
+            string Dirección = Consola.Línea de lectura();
+ Consola.WriteLine("Entrar en el departamento de empleados");
+            string Department = Consola.Línea de lectura();
+            Visualizar los datos de empleado introducidos
+ Consola.WriteLine("\nLos detalles del empleado ingresados son los siguientes:");
+ Consola.WriteLine($"El ID de empleado es: {EmployeeID}");
+ Consola.WriteLine($"El nombre del empleado es: {name}");
+ Consola.WriteLine($"El salario del empleado es: {salario}");
+ Consola.WriteLine($"La dirección del empleado es: {address}");
+ Consola.WriteLine($"Departamento de empleados es: {departamento}");
+ Consola.Tecla de lectura();
+        }
+    }
+}
+Salida:
+Ejemplo complejo para entender la clase de consola
+
+Ejemplo para mostrar a la calificación del estudiante usando métodos de clase de consola:
+Escriba un programa para ingresar el número de registro del estudiante, el nombre, Mark1, Mark2, Mark3 y calcule la calificación total y las calificaciones promedio y luego imprima los detalles del estudiante en la consola.
+
+usando System;
+espacio de nombres MyFirstProject
+{
+     Programa de clase interna 
+    {
+        static void Main(string[] args)
+        {
+            Pedir al usuario que introduzca los datos del alumno
+ Consola.WriteLine("Ingrese los detalles del estudiante");
+ Consola.WriteLine("Ingrese el número de registro");
+            int RegdNumber = Convertir.ToInt32(Consola.Línea de lectura());
+ Consola.WriteLine("Ingrese el nombre");
+            string Nombre = Consola.Línea de lectura();
+ Consola.WriteLine("Ingrese las calificaciones de tres materias:");
+ Consola.WriteLine("Subject1");
+            int Mark1 = Convertir.ToInt32(Consola.Línea de lectura());
+ Consola.WriteLine("Subject2");
+            int Marcos2 = Convertir.ToInt32(Consola.Línea de lectura());
+ Consola.WriteLine("Subject3");
+            int Marcos3 = Convertir.ToInt32(Consola.Línea de lectura());
+            int TotalMarks = Mark1 + Mark2 + Mark3;
+            int AverageMark = TotalMarks / 3;
+            Mostrar los detalles del estudiante
+ Consola.WriteLine("\nLos detalles del estudiante son los siguientes:");
+ Consola.WriteLine($"Número de registro: {RegdNumber}");
+ Consola.WriteLine($"Nombre: {Nombre}");
+ Consola.WriteLine($"Marcas totales: {TotalMarks}");
+ Consola.WriteLine($"Nota promedio: {AverageMark}");
+ Consola.Tecla de lectura();
+        }
+    }
+}
+Salida:
+Ejemplo para mostrar a la calificación del estudiante usando métodos de clase de consola
+
+Eso es todo por hoy. En el próximo artículo, voy a discutir los tipos de datos en C # con ejemplos. Aquí, en este artículo, trato de explicar los métodos y propiedades de Console Class en C # con ejemplos. Y espero que disfrutes de este artículo Métodos y propiedades de clase de consola en C# con ejemplos. 
