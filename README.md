@@ -14,3 +14,8 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+
+ismos pasos. Solo hay que seleccionar el tipo de proyecto que deseamos crear.
+
+
