@@ -9,8 +9,11 @@
 
             Prueba persona = new Prueba(32,"Rodrigo");
 
+            //mostrar de datos por consola
             Console.WriteLine($"Hola mi nombre es {persona.Name} y tengo {persona.edad}");
 
+            //mostrar datos por funcion de clase
+            persona.mostrarDatos();
 
 
 

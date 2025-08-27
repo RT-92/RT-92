@@ -14,5 +14,10 @@ namespace AppConsola
         {
             this.edad = edad; this.Name = name;
         }
+
+        public void mostrarDatos()
+        {
+            Console.WriteLine($"Hola mi nombre es {this.Name} y tengo {this.edad}");
+        }
     }
 }
