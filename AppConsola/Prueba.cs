@@ -8,11 +8,11 @@ namespace AppConsola
 {
     internal class Prueba
     {
-        public string Id { get; set; }  
+        public int edad { get; set; }  
         public string Name { get; set; }
-        public Prueba() 
+        public Prueba(int edad, string name ) 
         {
-        
+            this.edad = edad; this.Name = name;
         }
     }
 }
