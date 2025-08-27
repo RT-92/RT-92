@@ -8,12 +8,7 @@
             Console.BackgroundColor = ConsoleColor.Green;
 
 
-            Console.WriteLine("Hello, World!");
-
-            Console.WriteLine("Hello, World!");
-            Console.WriteLine("Hello, World!");
-            Console.WriteLine("Hello, World!");
-            Console.WriteLine("Hello, World!");
+            
 
         }
     }
